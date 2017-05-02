@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [TestAll]">
-  <test name="case1">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
     <classes>
-      <class name="unittesting.testng.beforeafter.TestNGConfiguration"/>
-      <class name="unittesting.testng.beforeafter.DBConfig"/>
-      <class name="unittesting.testng.beforeafter.TestDBConnection"/>
+      <class name="unittesting.calculator.CalculatorTestAddSub"/>
     </classes>
-  </test> <!-- case1 -->
-  <test name="case2">
+  </test> <!-- Default test -->
+  <test name="Default test(failed)">
     <classes>
-      <class name="unittesting.testng.beforeafter.TestDBConnection"/>
-      <class name="unittesting.testng.beforeafter.DBConfig"/>
+      <class name="unittesting.calculator.CalculatorTestAddSub">
+        <methods>
+          <include name="substractTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- unittesting.calculator.CalculatorTestAddSub -->
     </classes>
-  </test> <!-- case2 -->
-</suite> <!-- Failed suite [TestAll] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
